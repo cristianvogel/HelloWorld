@@ -25,7 +25,7 @@ void MainComponent::paint (Graphics& g)
     g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
 
     g.setFont (Font (32.0f));
-    g.setColour (Colours::green);
+    g.setColour (Colours::lawngreen);
     g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
 }
 
