@@ -26,7 +26,7 @@ void MainComponent::paint (Graphics& g)
 
     g.setFont (Font (48.0f));
     g.setColour (Colours::seagreen);
-    g.drawText ("Hello World!", getLocalBounds(), Justification::centred, true);
+    g.drawText ("Hello Sea World!", getLocalBounds(), Justification::centredRight, true);
 }
 
 void MainComponent::resized()
