@@ -10,6 +10,23 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 
+struct Car
+{
+    struct CarSeat {
+        bool seatIsLeather;
+    };
+    
+    int numberOfWheels;
+    bool convertible;
+    CarSeat driverSeat;
+    CarSeat navigatorSeat;
+    
+    bool switchSeats( CarSeat oldSeat, CarSeat newSeat  );
+    
+    void accelerate(float howfarToPushThePedal);
+};
+
+
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all
