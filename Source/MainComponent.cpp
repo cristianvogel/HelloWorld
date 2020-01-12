@@ -23,10 +23,19 @@ void MainComponent::paint (Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
-
     g.setFont (Font (48.0f));
     g.setColour (Colours::seagreen);
-    g.drawText ("Hello Sea World!", getLocalBounds(), Justification::centredRight, true);
+    
+    float opacity = 1.f;
+    for (int i=0; i<(4*32); i=i+32)
+        
+    {
+        g.drawEllipse(i+30.f, 30.f, 28.F, 28.f, 2.f);
+        g.setOpacity(opacity);
+        opacity = opacity - 0.25;
+    }
+    g.setOpacity(1.f);
+    g.drawText ("Hello Disc World!", getLocalBounds(), Justification::centredRight, true);
 }
 
 void MainComponent::resized()
