@@ -27,12 +27,12 @@ void MainComponent::paint (Graphics& g)
     g.setColour (Colours::seagreen);
     
     float opacity = 1.f;
-    for (int i=0; i<(4*32); i=i+32)
+    for (int i=0; i<(4*32); i+=32)
         
     {
         g.drawEllipse(i+30.f, 30.f, 28.F, 28.f, 2.f);
         g.setOpacity(opacity);
-        opacity = opacity - 0.25;
+        opacity *= 0.75;
     }
     g.setOpacity(1.f);
     g.drawText ("Hello Disc World!", getLocalBounds(), Justification::centredRight, true);
